@@ -20,11 +20,11 @@ module.exports = {
   ],
   "theme": "reco",
   "themeConfig": {
-    // valineConfig: {
+    valineConfig: {
       // appId: 'dXJfrib0qz0Uko6XtINWCJgL-gzGzoHsz',// your appId
       // appKey: 'K2PTbGifnRu9UKGSeTjnhhIi', // your appKey
       // placeholder: '请填写邮箱，可收到回复的提醒。'
-    // },
+    },
     "nav": [
       {
         "text": "首页",
