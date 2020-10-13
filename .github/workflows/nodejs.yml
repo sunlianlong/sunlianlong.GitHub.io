@@ -1,0 +1,37 @@
+name: Node CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x]
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Build and Deploy
+        uses: JamesIves/github-pages-deploy-action@master
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BASE_BRANCH: blog # The branch the action should deploy from.
+          BRANCH: master # The branch the action should deploy to.
+          FOLDER: public # The folder the action should deploy.
+          BUILD_SCRIPT: npm install &&  npm run build # The build script the action should run prior to deploying.
+      # - name: DeployToMain
+      #   uses: garygrossgarten/github-action-scp@release
+      #   with:
+      #     local: public
+      #     remote: /root/myapp/www/
+          # 涉及偏安全隐私的信息，不要明文暴露在此文件中，因为repo很可能是公开的，会被所有人看见
+          # ${{ ... }} 会应用你在对应项目设置中，配置的对应serets的键值信息，从而保护私密信息不被看到
+          # host: ${{ secrets.HOST }}
+          # username: ${{ secrets.USER }}
+          # privateKey: ${{ secrets.PEM }}
+          # concurrency: 20
