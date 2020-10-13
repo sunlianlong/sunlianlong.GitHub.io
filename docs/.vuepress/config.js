@@ -20,11 +20,11 @@ module.exports = {
   ],
   "theme": "reco",
   "themeConfig": {
-    valineConfig: {
+    // valineConfig: {
       // appId: 'dXJfrib0qz0Uko6XtINWCJgL-gzGzoHsz',// your appId
       // appKey: 'K2PTbGifnRu9UKGSeTjnhhIi', // your appKey
-      placeholder: '请填写邮箱，可收到回复的提醒。'
-    },
+      // placeholder: '请填写邮箱，可收到回复的提醒。'
+    // },
     "nav": [
       {
         "text": "首页",
@@ -115,7 +115,7 @@ module.exports = {
     "author": "孙连龙",
     "authorAvatar": "/logo.png",
     "record": "ICP",
-    recordLink: "http://beian.miit.gov.cn",
+    "recordLink": "http://beian.miit.gov.cn",
     "startYear": "2016",
     repo: 'sunlianlong/sunlianlong.github.io',
     // // 假如文档不是放在仓库的根目录下：
@@ -140,10 +140,10 @@ module.exports = {
     //   site_url: 'https://codingyang.com',
     //   copyright: ''
     // }]
-    ['@vuepress-reco/vuepress-plugin-rss', {
-      site_url: 'https://sunlianlong.com',
-      copyright: 'sunlianlong'
-    }],
+    // ['@vuepress-reco/vuepress-plugin-rss', {
+    //   site_url: 'https://sunlianlong.com',
+    //   copyright: 'sunlianlong'
+    // }],
   ]
 
 }
