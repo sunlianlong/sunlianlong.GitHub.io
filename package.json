@@ -1,12 +1,12 @@
 {
-  "name": "codingyang-blog",
+  "name": "sun-blog",
   "version": "1.0.0",
   "author": "Rackar",
   "scripts": {
     "autopush": "vuepress build docs && node ./utils/scp.js",
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
-    "buildSubpath": "export VUEPRESS_BASE=/codingyang/ || set VUEPRESS_BASE=/codingyang/ && vuepress build docs"
+    "buildSubpath": "export VUEPRESS_BASE=/sun/ || set VUEPRESS_BASE=/sun/ && vuepress build docs"
   },
   "devDependencies": {
     "@vuepress-reco/vuepress-plugin-rss": "^1.0.1",

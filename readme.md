@@ -1,12 +1,12 @@
 # 文章源码
 
-代码fork自https://github.com/Rackar/rackar.github.io
-
-模板更换为 vuepress-theme-reco 主题。自动分类和标签聚合，以及分页和评论。
+代码fork自[CodingYang](https://github.com/Rackar/rackar.github.io)，使用 [vuepress-theme-reco](https://gitee.com/vuepress-reco/vuepress-theme-reco)
 
 有些注意事项：
 
 1. 不使用一级标题，使用 yaml 来编辑元数据。日期中要注意前面补齐 0。
+
+2. vue-router版本已锁定为3.4.5，[非已了解勿动（issues）](https://github.com/vuejs/vuepress/issues/2656)
 
 ```yaml
 ---
@@ -25,14 +25,7 @@ categories:
 <!-- more -->
 ```
 
-```s
-tags:
-工具 陪娃 育娃软件 市场经济 公众号文章 数据库 Node.js Vue.js PostgREST Linux 测绘小程序
-categories:
-技术 儿童 个人 思考
-```
-
-2. 评论使用 Valine
+1. 评论使用 Valine，自行申请key，当前已注释
 
 3. 编译结果在`/public/`，而非`docs/.vuepress/dist`
 
@@ -65,25 +58,17 @@ yarn autopush
 
 vuepress 通过一定*号称简单*的配置之后，为每一个 md 文件生成静态 html 脚本，并通过主题挂接起来。用来写文档是非常不错的。写文章就要做一点工作，踩**一点**坑。
 
-[demo 演示](http://www.codingyang.com/)
+[demo 演示](https://sunlianlong.github.io)
 
-[github 源码](https://github.com/Rackar/rackar.github.io)
+[github 源码](https://github.com/sunlianlong/sunlianlong.GitHub.io)
 
 #### 注意 yaml
 
 必须放在 md 文件在最上方才能生效
 
-#### vue-router "3.4.5"
-
-[issues](https://github.com/vuejs/vuepress/issues/2656)
-
 #### 无法热更新
 
 修改 config.js 后，是没办法热更新的，只能 ctrl+c 结束任务然后重新 yarn dev
-
-#### 百度统计代码
-
-增加了一个 utils/db_hm.js 脚本，在 build 之后手动复制统计代码到首页 index.html 中。请自行从百度申请统计和推送链接代码。
 
 #### 使用 Github Aciton 自动发布到 Github Page
 
@@ -95,7 +80,7 @@ vuepress 通过一定*号称简单*的配置之后，为每一个 md 文件生�
 
 然后 git push 就好，CI 脚本自动发布。
 
-如果要发布到**非根目录**。要 修改 package.json 中 `buildSubpath` 命令里的两处： `VUEPRESS_BASE=/codingyang/` 中的 `codingyang` 替换为自己要部署的子目录名。然后修改 Action 脚本 `nodejs.yml` 中最后一行脚本中的 `npm run build` 为 `npm run buildSubpath` 。
+如果要发布到**非根目录**。要 修改 package.json 中 `buildSubpath` 命令里的两处： `VUEPRESS_BASE=/sun/` 中的 `sun` 替换为自己要部署的子目录名。然后修改 Action 脚本 `nodejs.yml` 中最后一行脚本中的 `npm run build` 为 `npm run buildSubpath` 。
 
 ## 相关技术
 

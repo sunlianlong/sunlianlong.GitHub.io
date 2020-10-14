@@ -10,7 +10,7 @@ home: true
 #   borderRadius: '1rem',
 # }
 bgImageStyle: { height: "350px" }
-bgImage: /ba.png
+bgImage: /aurora_sky.jpg
 isShowTitleInHome: false
 actionText: Guide
 actionLink: /views/other/guide

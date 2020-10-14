@@ -1,5 +1,5 @@
 module.exports = {
-  "title": "CodingSun",
+  "title": "Sun",
   "description": "个人博客",
   "dest": "public",
   "head": [
@@ -40,40 +40,12 @@ module.exports = {
         "text": "联系",
         "icon": "reco-message",
         "items": [
-          //         { text: "联系我", link: "/about/" },
-          //         { text: "友情链接", link: "/about/friend" },
-          //         { text: "CSDN", link: "https://blog.csdn.net/henjuewang" },
-          //         { text: "简书", link: "https://www.jianshu.com/u/2d95604f4b82" },
-          //         { text: "微博", link: "https://weibo.com/u/1828163444" },
-          //         { text: "github", link: "https://github.com/rackar" },
-          //         { text: "码云", link: "https://gitee.com/rackar" }
           {
             text: "关于", link: "/about/"
           },
           // {
           //   text: "RSS订阅", link: "https://codingyang.com/rss.xml", icon: 'reco-rss'
           // },
-          // {
-          //   "text": "GitHub",
-          //   "link": "https://github.com/rackar",
-          //   "icon": "reco-github"
-          // },
-          // {
-          //   "text": "简书",
-          //   "link": "https://www.jianshu.com/u/2d95604f4b82",
-          //   "icon": "reco-jianshu"
-          // },
-          // {
-          //   "text": "CSDN",
-          //   "link": "https://blog.csdn.net/henjuewang",
-          //   "icon": "reco-csdn"
-          // },
-
-          // {
-          //   "text": "WeChat",
-          //   "link": "https://mp.weixin.qq.com/s/-MJyE7Y7ixpm3gY1ZOcTIw",
-          //   "icon": "reco-wechat"
-          // }
         ]
       }
     ],
@@ -112,12 +84,12 @@ module.exports = {
     "searchMaxSuggestions": 10,
     "sidebar": "auto",
     "lastUpdated": "更新于",
-    "author": "孙连龙",
+    "author": "Sun",
     "authorAvatar": "/logo.png",
-    "record": "ICP",
+    "record": "粤ICP备16092199号-3",
     "recordLink": "http://beian.miit.gov.cn",
     "startYear": "2016",
-    repo: 'sunlianlong/sunlianlong.github.io',
+    "repo": 'sunlianlong/sunlianlong.github.io',
     // // 假如文档不是放在仓库的根目录下：
     docsDir: 'docs',
     // // 假如文档放在一个特定的分支下：
@@ -136,14 +108,15 @@ module.exports = {
     }
   },
   plugins: [
-    // ['@vuepress-reco/rss', {
-    //   site_url: 'https://codingyang.com',
-    //   copyright: ''
-    // }]
+    ['@vuepress-reco/vuepress-plugin-kan-ban-niang', {
+      welcome: '欢迎来到 Sun 的博客',
+      home: '心里的花，我想要带你回家。',
+      theme: '好吧，希望你能喜欢我的其他小伙伴。',
+      close: '你知道我喜欢吃什么吗？痴痴地望着你。'
+    }]
     // ['@vuepress-reco/vuepress-plugin-rss', {
     //   site_url: 'https://sunlianlong.com',
     //   copyright: 'sunlianlong'
     // }],
   ]
-
 }
