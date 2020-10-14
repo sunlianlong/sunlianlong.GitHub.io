@@ -16,7 +16,19 @@ module.exports = {
         "name": "viewport",
         "content": "width=device-width,initial-scale=1,user-scalable=no"
       }
-    ]
+    ],
+    // 引入jquery
+    ["script", {
+      "language": "javascript",
+      "type": "text/javascript",
+      "src": "https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"
+    }],
+    // 引入鼠标点击脚本
+    ["script", {
+      "language": "javascript",
+      "type": "text/javascript",
+      "src": "/js/MouseClickEffect.js"
+    }]
   ],
   "theme": "reco",
   "themeConfig": {
@@ -89,6 +101,7 @@ module.exports = {
     "record": "粤ICP备16092199号-3",
     "recordLink": "http://beian.miit.gov.cn",
     "startYear": "2016",
+    // "repoLabel": 'GitHub',
     "repo": 'sunlianlong/sunlianlong.github.io',
     // // 假如文档不是放在仓库的根目录下：
     docsDir: 'docs',
@@ -109,11 +122,32 @@ module.exports = {
   },
   plugins: [
     ['@vuepress-reco/vuepress-plugin-kan-ban-niang', {
-      welcome: '欢迎来到 Sun 的博客',
-      home: '心里的花，我想要带你回家。',
-      theme: '好吧，希望你能喜欢我的其他小伙伴。',
-      close: '你知道我喜欢吃什么吗？痴痴地望着你。'
-    }]
+      theme:['wanko'],
+      clean:true
+    }],
+    ['@vuepress/pwa', {
+      serviceWorker: true,
+      updatePopup: {
+          message: "新的风暴已经出现",
+          buttonText: "盘他"
+      }
+    }],
+    [
+      "dynamic-title",
+      {
+        showIcon: "/favicon.ico",
+        showText: "(/≧▽≦/)咦！又好了！",
+        hideIcon: "/failure.ico",
+        hideText: "(●—●)喔哟，崩溃啦！",
+        recoverTime: 2000
+      }
+    ],
+    ["vuepress-plugin-nuggets-style-copy", {
+      copyText: "复制代码",
+      tip: {
+          content: "复制成功!"
+      }
+    }],
     // ['@vuepress-reco/vuepress-plugin-rss', {
     //   site_url: 'https://sunlianlong.com',
     //   copyright: 'sunlianlong'

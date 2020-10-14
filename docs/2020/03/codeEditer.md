@@ -7,7 +7,7 @@ categories:
   - 技术
 ---
 
-![code](/coding.jpg)
+![code](/assets/img/coding.jpg)
 
 如何像程序员写代码一样来写文章，组合各种便利的工具，实现万无一失的功能。
 
