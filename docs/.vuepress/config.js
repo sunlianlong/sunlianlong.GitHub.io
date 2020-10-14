@@ -10,6 +10,9 @@ module.exports = {
         "href": "/favicon.ico"
       }
     ],
+    ['link', { rel: 'apple-touch-icon', href: '/icons/128.png' }],
+    ['link', { rel: 'manifest', href: '/manifest.json' }],
+    ['meta', { name: 'theme-color', content: '#ffffff' }],
     [
       "meta",
       {
@@ -122,14 +125,14 @@ module.exports = {
   },
   plugins: [
     ['@vuepress-reco/vuepress-plugin-kan-ban-niang', {
-      theme:['wanko'],
-      clean:true
+      theme: ['wanko'],
+      clean: true
     }],
     ['@vuepress/pwa', {
       serviceWorker: true,
       updatePopup: {
-          message: "新的风暴已经出现",
-          buttonText: "盘他"
+        message: "新的风暴已经出现",
+        buttonText: "盘他"
       }
     }],
     [
@@ -145,7 +148,7 @@ module.exports = {
     ["vuepress-plugin-nuggets-style-copy", {
       copyText: "复制代码",
       tip: {
-          content: "复制成功!"
+        content: "复制成功!"
       }
     }],
     // ['@vuepress-reco/vuepress-plugin-rss', {
