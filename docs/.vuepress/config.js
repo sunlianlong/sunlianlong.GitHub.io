@@ -52,16 +52,24 @@ module.exports = {
         "icon": "reco-date"
       },
       {
+        "text": "导航",
+        "link": "/navigation/",
+        "icon": "reco-date"
+      },
+      {
         "text": "联系",
         "icon": "reco-message",
         "items": [
           {
             text: "关于", link: "/about/"
-          },
-          // {
-          //   text: "RSS订阅", link: "https://codingyang.com/rss.xml", icon: 'reco-rss'
-          // },
+          }
         ]
+      },
+      {
+        "text": "GitHub",
+        "icon": "reco-github",
+        "link": "https://github.com/sunlianlong/sunlianlong.github.io",
+        "target":'_blank' 
       }
     ],
     "type": "blog",
@@ -75,25 +83,6 @@ module.exports = {
         "text": "标签"
       }
     },
-    // "friendLink": [
-    //   {
-    //     "title": "午后南杂",
-    //     "desc": "Enjoy when you can, and endure when you must.",
-    //     "email": "1156743527@qq.com",
-    //     "link": "https://www.recoluan.com"
-    //   },
-    //   {
-    //     "title": "vuepress-theme-reco",
-    //     "desc": "A simple and beautiful vuepress Blog & Doc theme.",
-    //     "avatar": "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
-    //     "link": "https://vuepress-theme-reco.recoluan.com"
-    //   },
-    //   {
-    //     "title": "邪少",
-    //     "desc": "前端技术",
-    //     "link": "//itwmw.com"
-    //   },
-    // ],
     "logo": "/logo.png",
     "search": true,
     "searchMaxSuggestions": 10,
@@ -105,7 +94,7 @@ module.exports = {
     "recordLink": "http://beian.miit.gov.cn",
     "startYear": "2016",
     // "repoLabel": 'GitHub',
-    "repo": 'sunlianlong/sunlianlong.github.io',
+    // "repo": 'sunlianlong/sunlianlong.github.io',
     // // 假如文档不是放在仓库的根目录下：
     docsDir: 'docs',
     // // 假如文档放在一个特定的分支下：
