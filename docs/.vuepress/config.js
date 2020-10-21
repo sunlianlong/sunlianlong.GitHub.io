@@ -53,7 +53,7 @@ module.exports = {
       },
       {
         "text": "导航",
-        "link": "/navigation/",
+        "link": "http://sllhome.gitee.io/navigation/",
         "icon": "reco-date"
       },
       {
