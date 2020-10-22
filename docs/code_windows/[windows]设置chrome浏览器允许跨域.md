@@ -7,7 +7,6 @@ tags:
 categories:
   - 开发环境
 ---
-
 1. 在C盘新建文件夹MyChromeDevUserData
 ```
 C:\MyChromeDevUserData
