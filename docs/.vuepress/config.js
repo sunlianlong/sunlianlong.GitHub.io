@@ -1,6 +1,6 @@
 module.exports = {
   "title": "Sun",
-  "description": "个人博客",
+  "description": "个人博客-2026",
   "dest": "public",
   "head": [
     [
